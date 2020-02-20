@@ -1,0 +1,42 @@
+{
+  "name": "api-server-lab-8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "test-watch": "jest --watchAll --coverage",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caitrowland-401-advanced-javascript/api-server-lab-8.git"
+  },
+  "keywords": [],
+  "author": "Cait Rowland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caitrowland-401-advanced-javascript/api-server-lab-8/issues"
+  },
+  "homepage": "https://github.com/caitrowland-401-advanced-javascript/api-server-lab-8#readme",
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2"
+  },
+  "standard": {
+    "env": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "@code-fellows/supergoose": "^1.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "httpie": "^1.1.2",
+    "mongoose": "^5.9.1"
+  }
+}
