@@ -9,29 +9,10 @@ app.use(morgan());
 app.use(express.json());
 app.use(cors())
 
-const { handleGetAll, handleGetOne, handlePost, handleUpdate, handleDelete } = require('../lib/routeGenerator');
+const { handleGetAll, handleGetOne, handlePost, handleUpdate, handleDelete, getModel } = require('../lib/routeGenerator');
 
 const Category = require('./models/categories');
-const categories = new Category();
 const Product = require('./models/products');
-const products = new Product();
-
-function getModel(request, response, next) {
-    const model = request.params.model;
-    switch (model) {
-        case 'categories':
-            request.model = categories;
-            next();
-            break;
-        case 'products': 
-            request.model=products;
-            next();
-            break;
-        default:
-            throw new Error('invalid model')
-    }
-   
-}
 
 // Routes 
 app.param('model', getModel);
