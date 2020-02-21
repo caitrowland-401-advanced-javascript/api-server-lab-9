@@ -19,8 +19,8 @@ i.e.
 
 #### How to initialize/run your application (where applicable)
 
-- `npm i` to install dependencies
-_ `npm start`
+- `npm install` to install dependencies
+_ `npm start` to start server
 
 #### Tests
 
